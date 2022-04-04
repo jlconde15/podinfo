@@ -4,15 +4,17 @@ metadata:
   name: podinfo
   namespace: default
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: podinfo
   ports:
     - name: http
       port: 9898
+      nodePort: 9898
       protocol: TCP
       targetPort: http
     - port: 9999
+      nodePort: 9998
       targetPort: grpc
       protocol: TCP
       name: grpc

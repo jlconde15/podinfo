@@ -10,11 +10,11 @@ spec:
   ports:
     - name: http
       port: 9898
-      nodePort: 9898
+      nodePort: 30098
       protocol: TCP
       targetPort: http
     - port: 9999
-      nodePort: 9998
+      nodePort: 30099
       targetPort: grpc
       protocol: TCP
       name: grpc
